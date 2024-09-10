@@ -1,1 +1,1 @@
-This folder contains practical programs of Operating System Labs.
+This folder contains practical programs of Operating System Lab.
