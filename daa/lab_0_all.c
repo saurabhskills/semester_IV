@@ -28,11 +28,9 @@ int linearSearch(int arr[], int size, int key)
     {
         if (arr[i] == key)
         {
-            printf("%d is found at %d\n", key, i);
             return i;
         }
     }
-    printf("%d is not found.\n", key);
     return -1;
 }
 
@@ -149,7 +147,7 @@ void quickSort(int array[], int p, int r)
     {
         int q = partition(array, p, r);
         quickSort(array, p, q - 1);
-        quickSort(array, p + 1, r);
+        quickSort(array, q + 1, r);
     }
 }
 
@@ -245,7 +243,7 @@ void heapSort(int arr[], int n)
 
 int main()
 {
-    int choice, key, choice2, index;
+    int choice, key, index;
     char ch;
     int arr[5] = {1, 20, 12, 13, 15};
     int size = 5;
@@ -306,7 +304,7 @@ int main()
                 printArray(arr, size);
                 break;
             case 5:
-                mergeSort(arr, 0, size);
+                mergeSort(arr, 0, size-1);
                 printf("Using Merge sort: ");
                 printArray(arr, size);
                 break;
@@ -372,7 +370,7 @@ int main()
         }
 
         printf("Would you like to continue(y/n):");
-        scanf("    %c", &ch);
+        scanf(" %c", &ch);
     } while (ch == 'y');
 
     return 0;
