@@ -75,7 +75,7 @@ int recBinarySearch(int arr[], int l, int h, int x)
 // 4. Bubble Sort
 void bubbleSort(int arr[], int n)
 {
-    int i, j, temp;
+    int i, j;
     for (i = 0; i < n - 1; i++)
     {
         for (j = 0; j < n - i - 1; j++)
@@ -91,7 +91,7 @@ void bubbleSort(int arr[], int n)
 // 5. Selection Sort
 void selectionSort(int arr[], int n)
 {
-    int i, j, min, temp;
+    int i, j, min;
     for (i = 0; i < n - 1; i++)
     {
         min = i;
